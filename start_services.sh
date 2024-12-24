@@ -1,4 +1,9 @@
 #!/bin/bash
+
+### Starts docker compose services
+# Usage: start_services.sh
+# Checks if Docker Compose is installed and starts services
+
 COMPOSE_FILE_PATH="docker-compose.yaml"
 
 function check_docker_compose_installation {

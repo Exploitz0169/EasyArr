@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### Creates folders for Usenet and/or Torrent downloads
-# Usage: folder_creation.sh [base_dir] [install_type]
+# Usage: folder_creation.sh [install_type] [service1, service2, ...]
 # Designed for dockerized setup so the containers can 
 # be passed the same host directory as a volume bind mount
 # This way docker sees it as one file system and can make direct changes instead of C+P
@@ -48,16 +48,16 @@ if [ -z "$BASE_DIR" ]; then
     exit 1
 fi
 
-if [ -z "$2" ]; then
+if [ -z "$1" ]; then
     INSTALL_TYPE="full"
 else
-    INSTALL_TYPE="$2"
+    INSTALL_TYPE="$1"
 fi
 
-if [ -z "$3" ]; then
+if [ -z "$2" ]; then
     SERVICES="radarr,sonarr,nzbget,jellyfin,jellyseerr"
 else
-    SERVICES="$3"
+    SERVICES="$2"
 fi
 
 echo "Creating folders for $INSTALL_TYPE installation in $BASE_DIR"

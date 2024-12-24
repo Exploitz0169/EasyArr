@@ -1,5 +1,9 @@
 #!/bin/bash
 
+### Initial setup process
+# Usage: setup.sh
+# Can change the BASE_DIR in base_dir.sh to set the base directory for all services
+
 source ./base_dir.sh
 
 FOLDER_CREATION_SCRIPT="./folder_creation.sh"
