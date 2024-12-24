@@ -42,15 +42,16 @@ services:
     networks:
       - media_network
 
-  nzbget:
-    container_name: nzbget
-    image: ghcr.io/hotio/nzbget:latest
+  sabnzbd:
+    container_name: sabnzbd
+    image: ghcr.io/hotio/sabnzbd:latest
     <<: 
       - *restart-policy
       - *common-logging
       - *common-env
     ports:
-      - 6789:6789
+      - 8080:8080
+      - 9090:9090
     volumes:
       - ${BASE_DIR:-/data}/appdata/nzbget:/config
       - ${BASE_DIR:-/data}/usenet:/data/usenet:rw
