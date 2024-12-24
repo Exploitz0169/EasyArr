@@ -73,7 +73,6 @@ services:
     volumes:
       - ${BASE_DIR:-/data}/appdata/jellyfin:/config
       - ${BASE_DIR:-/data}:/data
-    # To support DLNA
     networks:
       - media_network
 

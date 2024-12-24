@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ### Updates the scripts and Docker Compose file
+# Usage: update.sh
 
 source ./base_dir.sh
 
