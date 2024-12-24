@@ -65,12 +65,16 @@ services:
       - *common-logging
       - *common-env
     ports:
+    # https://jellyfin.org/docs/general/networking/
       - 8096:8096
+      - 1900:1900/udp # DLNA
+      - 7359:7359/udp # DLNA
     volumes:
       - ${BASE_DIR:-/data}/appdata/jellyfin:/config
       - ${BASE_DIR:-/data}:/data
     # To support DLNA
-    network_mode: host
+    networks:
+      - media_network
 
   jellyseerr:
     container_name: jellyseerr
