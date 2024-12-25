@@ -2,7 +2,7 @@
 
 ### Creates folders for Usenet and/or Torrent downloads
 # Usage: folder_creation.sh [install_type] [service1, service2, ...]
-# Designed for dockerized setup so the containers can 
+# Designed for dockerized setup so the containers can
 # be passed the same host directory as a volume bind mount
 # This way docker sees it as one file system and can make direct changes instead of C+P
 # See more: https://trash-guides.info/File-and-Folder-Structure/How-to-set-up/Docker/
@@ -44,7 +44,7 @@ function set_permissions {
 
 
 if [ -z "$BASE_DIR" ]; then
-    echo "Set BASE_DIR environment variable before running this script."
+    echo "Set BASE_DIR environment variable before running this script. Ensure you have copied base_dir.sh.bak to base_dir.sh in this directory."
     exit 1
 fi
 
@@ -71,17 +71,17 @@ case $INSTALL_TYPE in
     full)
         create_usenet_folders
         create_torrent_folders
-        ;;
+    ;;
     usenet)
         create_usenet_folders
-        ;;
+    ;;
     torrent)
         create_torrent_folders
-        ;;
+    ;;
     *)
         echo "Invalid installation type: $INSTALL_TYPE"
         exit 1
-        ;;
+    ;;
 esac
 
 create_appdata_folders
