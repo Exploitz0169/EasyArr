@@ -11,6 +11,12 @@ function check_docker_compose_installation {
         echo "Docker Compose is not installed. Please install it first."
         exit 1
     fi
+
+    if [ ! -f "$COMPOSE_FILE_PATH" ]; then
+        echo "Compose file not found at $COMPOSE_FILE_PATH. Make sure to copy docker-compose.yaml.bak to docker-compose.yaml in this directory."
+        exit 1
+    fi
+
 }
 
 function start_services {
