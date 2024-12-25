@@ -9,7 +9,7 @@ x-common-logging: &common-logging
     driver: json-file
 
 x-common-restart-policy: &restart-policy
-  restart: unless-stopped
+  restart: always
 
 services:
   radarr:
