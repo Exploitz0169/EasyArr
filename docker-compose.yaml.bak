@@ -1,3 +1,5 @@
+# Copy this file to docker-compose.yaml
+
 x-common-variables: &common-env
   environment:
     - PUID=1000
