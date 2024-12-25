@@ -90,7 +90,30 @@ services:
       - ${BASE_DIR:-/data}:/data
     networks:
       - media_network
+  
+  caddy:
+    container_name: caddy
+    image: caddy:2.9
+    <<: 
+      - *restart-policy
+      - *common-logging
+    ports:
+      - 80:80
+      - 443:443
+      - 443:443/udp
+    volumes:
+      # https://hub.docker.com/_/caddy
+      - $PWD/conf:/etc/caddy
+      # Caddy does not need to share a filesyetm with the services it proxies
+      # Let docker handle the named volumes
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - media_network
 
 networks:
   media_network:
     driver: bridge
+volumes:
+  caddy_data:
+  caddy_config:

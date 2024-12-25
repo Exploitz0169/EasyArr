@@ -1,0 +1,32 @@
+### Copy this file to Caddyfile
+# Caddyfile managed in this directory to allow for easy graceful reloading of caddy service
+# with ./reload_caddy.sh
+
+# Caddy recommends mounting the conf folder instead of just the Caddyfile. See:
+# https://hub.docker.com/_/caddy
+
+{
+    email youremail@example.com  # Used for Let's Encrypt notifications
+}
+
+# Define reverse proxies here. Automatic TLS support provided by Caddy
+
+radarr.example.com {
+    reverse_proxy radarr:7878
+}
+
+sonarr.example.com {
+    reverse_proxy sonarr:8989
+}
+
+sabnzbd.example.com {
+    reverse_proxy sabnzbd:8080
+}
+
+jellyfin.example.com {
+    reverse_proxy jellyfin:8096
+}
+
+jellyseerr.example.com {
+    reverse_proxy jellyseerr:5055
+}
