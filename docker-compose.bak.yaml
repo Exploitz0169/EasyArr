@@ -74,7 +74,7 @@ services:
       - 7359:7359/udp # DLNA
     volumes:
       - ${BASE_DIR:-/data}/appdata/jellyfin:/config
-      - ${BASE_DIR:-/data}:/data
+      - ${BASE_DIR:-/data}/media:/data/media
     networks:
       - media_network
 

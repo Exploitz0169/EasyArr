@@ -36,6 +36,15 @@ function create_appdata_folders {
     done
 }
 
+function create_media_folders {
+    echo "Creating Media folders in $BASE_DIR"
+    if [ -d "$BASE_DIR/media" ]; then
+        echo "Media folder already exists, skipping"
+        return
+    fi
+    mkdir -p "$BASE_DIR"/media/{books,movies,music,tv} || exit 1
+}
+
 function set_permissions {
     echo "Setting permissions for $BASE_DIR"
     sudo chown -R $USER:$(id -gn $USER) $BASE_DIR || exit 1
@@ -85,6 +94,7 @@ case $INSTALL_TYPE in
 esac
 
 create_appdata_folders
+create_media_folders
 set_permissions
 
 echo "Folders created successfully"
