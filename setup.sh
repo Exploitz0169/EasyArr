@@ -12,8 +12,8 @@ START_SERVICES_SCRIPT="./start_services.sh"
 
 function set_permissions {
     echo "Setting executable permissions on the scripts..."
-    chmod +x "$FOLDER_CREATION_SCRIPT"
-    chmod +x "$START_SERVICES_SCRIPT"
+    chmod +x "$FOLDER_CREATION_SCRIPT" || exit 1
+    chmod +x "$START_SERVICES_SCRIPT" || exit 1
 }
 
 
