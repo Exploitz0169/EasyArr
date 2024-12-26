@@ -8,7 +8,7 @@ source ./base_dir.sh
 COMPOSE_FILE_PATH="docker-compose.yaml"
 
 if [ ! -d "$BASE_DIR" ]; then
-    echo "Set BASE_DIR environment variable before running this script. Ensure you have copied base_dir.sh.bak to base_dir.sh in this directory."
+    echo "Set BASE_DIR environment variable before running this script. Ensure you have copied base_dir.bak.sh to base_dir.sh in this directory."
     exit 1
 fi
 

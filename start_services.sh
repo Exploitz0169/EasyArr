@@ -13,7 +13,7 @@ function check_docker_compose_installation {
     fi
 
     if [ ! -f "$COMPOSE_FILE_PATH" ]; then
-        echo "Compose file not found at $COMPOSE_FILE_PATH. Make sure to copy docker-compose.yaml.bak to docker-compose.yaml in this directory."
+        echo "Compose file not found at $COMPOSE_FILE_PATH. Make sure to copy docker-compose.bak.yaml to docker-compose.yaml in this directory."
         exit 1
     fi
 
