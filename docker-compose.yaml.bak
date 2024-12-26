@@ -112,6 +112,23 @@ services:
       - caddy_config:/config
     networks:
       - media_network
+    
+  cloudflare-ddns:
+    # See: https://github.com/favonia/cloudflare-ddns
+    container_name: cloudflare-ddns
+    image: favonia/cloudflare-ddns:1.15.1
+    network_mode: host
+    <<:
+      - *restart-policy
+      - *common-logging
+    read_only: true
+    cap_drop: [all]
+    security_opt: [no-new-privileges:true]
+    environment:
+      - CLOUDFLARE_API_TOKEN=<API_TOKEN>
+      # Supports wildcard
+      - DOMAINS=<DOMAINS HERE>
+      - PROXIED=false
 
 networks:
   media_network:
