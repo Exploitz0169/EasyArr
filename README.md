@@ -101,11 +101,14 @@ I highly recommend this as a resource: https://trash-guides.info/ a lot of the i
 The following screenshots come right from https://trash-guides.info/:
 
 Sonarr:
+
 ![Sonarr config](https://imgur.com/38ZUZHy.png)
 
 Radarr:
+
 ![Radarr Config](https://imgur.com/STvDHhM.png)
 
 Sabnzbd:
+
 ![Sabnzbd Config](https://imgur.com/5rDoiWm.png)
 
