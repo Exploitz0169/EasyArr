@@ -84,3 +84,28 @@ For the Cloudflare setup:
  1. Register your domain on [Cloudflare](https://www.cloudflare.com/) 
  2. Create a [User API Token](https://dash.cloudflare.com/profile/api-tokens)
  3. Set `CLOUDFLARE_API_TOKEN` and `DOMAINS` environment variables in `docker-compose.yaml`
+
+API Token Perms:
+![API Token Perms](https://i.imgur.com/TncmYl3.png)
+
+You can set select your domain as the zone. 
+
+Note: `DOMAINS` can be a wildcard, ex: `DOMAINS=*.example.com`. You can provide a comma separated list as well. It is generally recommended to be more explicit. 
+
+That's it, the service will automatically update your IP address in Cloudlfare for the specified domains.
+
+## Setting up the apps
+
+I highly recommend this as a resource: https://trash-guides.info/ a lot of the info here comes from this website. I am just including it in the readme here for my reference.
+
+The following screenshots come right from https://trash-guides.info/:
+
+Sonarr:
+![Sonarr config](https://imgur.com/38ZUZHy.png)
+
+Radarr:
+![Radarr Config](https://imgur.com/STvDHhM.png)
+
+Sabnzbd:
+![Sabnzbd Config](https://imgur.com/5rDoiWm.png)
+
