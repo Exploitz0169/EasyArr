@@ -43,6 +43,9 @@ Finally, setup:
 
     ./setup.sh
 
+
+Note: You may need to change the PUID and PGID in `docker-compose.yaml`. The script sets permissions for the current user. Get both IDs with `id -u` and `id -g`, respectively.
+
 ## Updating
 
 Updating is made simple. Run:
