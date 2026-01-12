@@ -88,7 +88,7 @@ services:
     ports:
       - 5055:5055
     volumes:
-      - ${BASE_DIR:-/data}/appdata/jellyseerr:/config
+      - ${BASE_DIR:-/data}/appdata/jellyseerr:/app/config
       - ${BASE_DIR:-/data}:/data
     networks:
       - media_network
