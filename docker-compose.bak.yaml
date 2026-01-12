@@ -80,7 +80,7 @@ services:
 
   jellyseerr:
     container_name: jellyseerr
-    image: ghcr.io/hotio/jellyseerr
+    image: fallenbagel/jellyseerr:latest
     <<: 
       - *restart-policy
       - *common-logging
