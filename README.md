@@ -7,7 +7,7 @@ This creates the following services:
  - [Sonarr](https://github.com/Sonarr/Sonarr)
  - [Sabnzbd](https://github.com/sabnzbd/sabnzbd)
  - [Jellyfin](https://github.com/jellyfin/jellyfin)
- - [Jellyseerr](https://github.com/Fallenbagel/jellyseerr)
+ - [Seerr](https://github.com/seerr-team/seerr)
  - [Caddy](https://github.com/caddyserver/caddy)
  - [Cloudflare DDNS](https://github.com/favonia/cloudflare-ddns)
 

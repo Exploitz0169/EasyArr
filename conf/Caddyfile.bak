@@ -27,6 +27,6 @@ jellyfin.example.com {
     reverse_proxy jellyfin:8096
 }
 
-jellyseerr.example.com {
-    reverse_proxy jellyseerr:5055
+seerr.example.com {
+    reverse_proxy seerr:5055
 }

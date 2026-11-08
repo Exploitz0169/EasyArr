@@ -64,7 +64,7 @@ else
 fi
 
 if [ -z "$2" ]; then
-    SERVICES="radarr,sonarr,sabnzbd,jellyfin,jellyseerr"
+    SERVICES="radarr,sonarr,sabnzbd,jellyfin,seerr"
 else
     SERVICES="$2"
 fi
